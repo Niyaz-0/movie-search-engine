@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MovieCard from "../components/MovieCard";
 import { getPopularMovies, searchMovie } from "../services/api";
+import SearchIcon from '@mui/icons-material/Search';
 
 export default function Home() {
   const [searchText, setSearchText] = useState("");
@@ -53,16 +54,20 @@ export default function Home() {
           onSubmit={handleSearch}
           className="flex justify-center items-center my-5 gap-x-3.5"
         >
-          <input
-            type="text"
-            placeholder="Search for movies..."
-            value={searchText}
-            onChange={(e) => setSearchText(e.target.value)}
-            className="bg-gray-500 h-11 p-4 pr-24 text-lg rounded-lg"
-          />
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search for movies..."
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+              className="bg-gray-500 h-11 p-4 pr-14 text-lg rounded-lg"
+            />
+            <SearchIcon className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-300" />
+          </div>
           <button
             type="submit"
-            className="bg-red-600 px-5 py-2 text-lg font-bold rounded-lg">
+            className="bg-red-600 px-5 py-2 text-lg font-bold rounded-lg"
+          >
             Search
           </button>
         </form>
