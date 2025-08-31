@@ -2,6 +2,8 @@
 
 A React-based movie search application built with Vite. This project aims to provide users with the ability to search for movies and view relevant information in a responsive and user-friendly interface.
 
+**🚀 Live Demo: [Movie Search Engine App](https://movie-search-engine-henna.vercel.app/)**
+
 ## 🚀 Features
 
 - Search for movies by title
